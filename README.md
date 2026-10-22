@@ -50,6 +50,8 @@ To have the form email George instead:
 
 ## Editing tips
 
+- Browsers cache `styles.css` and `main.js`. Every page links them as `css/styles.css?v=3` and `js/main.js?v=3`; when you change either file, change the number in all the HTML files (find and replace `?v=3` with `?v=4`) so visitors get the new version straight away.
+
 - Phone number appears as `07735 894261` (display), `tel:+447735894261` (links) and `447735894261` (WhatsApp links). Search for all three if it ever changes.
 - To change the accent colour, edit `--accent` in `css/styles.css`.
 - Keep new photos under about 300 KB each; resize to 1600px on the long edge before uploading.
