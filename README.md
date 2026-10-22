@@ -44,11 +44,11 @@ To have the form email George instead:
 
 - Email address: none shown on the site yet. Add it to the footer "Contact" column and `contact.html` when confirmed.
 - Opening hours: not shown. Add to the top bar or the contact page aside.
-- Service area: the site says "Halifax and across Calderdale". Add a list of towns once confirmed.
+- Service area: the site says "Halifax and across West Yorkshire". Add a list of towns once confirmed.
 - Insurance: the commercial page says certificates are sent with the quote. Confirm George's public liability cover and insurer before relying on it, and consider adding "Fully insured" to the home page trust strip once confirmed.
 - Reviews: no reviews section on the live site yet. When there are real Google or Facebook reviews, add a section to `index.html` (three cards with a star row, the quote, the customer's first name and area). Never invent any.
 - Prices: none shown. If George wants "from £" prices, add a line under each service's button on `services.html`.
-- Photos still needed: a UPVC fascia before/after, a driveway jet wash, and the van (window cleaning is now covered by the roof-lantern shot). Drop them in `img/`, then add `<figure>` blocks in `gallery.html` with the right `data-cat` (windows, upvc, jet) so the filter buttons pick them up.
+- Photos still needed: a UPVC fascia before/after and the van (window cleaning and jet washing are now covered). Drop them in `img/`, then add `<figure>` blocks in `gallery.html` with the right `data-cat` (windows, upvc, jet) so the filter buttons pick them up.
 
 ## Editing tips
 
