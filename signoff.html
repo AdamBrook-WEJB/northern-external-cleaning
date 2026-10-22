@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job completion &amp; sign-off | Northern External Cleaning Co</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Internal job completion and client sign-off form.">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/signoff.css?v=1">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>Northern External Cleaning Co · Internal form</span>
+    <span>Draft saves on this device as you type</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="img/logo.png" alt="" width="60" height="60">
+      <span class="brand-name">Northern <small>External Cleaning Co</small></span>
+    </a>
+    <span class="saved-pill" id="saved-pill"></span>
+  </div>
+</header>
+
+<main class="so-wrap">
+
+  <div class="stack">
+    <span class="eyebrow">Job completion record</span>
+    <h1 class="display" style="font-size: clamp(34px, 5vw, 52px)">Sign-off sheet</h1>
+    <p class="muted">Fill this in on site at the end of the job, add the photos, get the client contact to sign, then press <strong>Create PDF</strong>. The PDF is made on this phone, nothing is uploaded anywhere, and you can send it to the client straight from the share sheet.</p>
+  </div>
+
+  <form id="so-form" autocomplete="off" novalidate>
+
+    <!-- 1. Job -->
+    <section class="so-card">
+      <h2>1. Job details</h2>
+      <div class="so-grid">
+        <div class="field"><label for="jobRef" class="required">Job reference</label><input id="jobRef" name="jobRef" type="text" placeholder="NECC-BOC-001"></div>
+        <div class="field"><label for="date" class="required">Date</label><input id="date" name="date" type="date"></div>
+        <div class="field"><label for="client">Client</label><input id="client" name="client" type="text" value="BOC Limited"></div>
+        <div class="field"><label for="poNumber">Purchase order / contract no.</label><input id="poNumber" name="poNumber" type="text"></div>
+        <div class="field wide"><label for="siteName" class="required">Site name</label><input id="siteName" name="siteName" type="text" placeholder="e.g. BOC Leeds"></div>
+        <div class="field wide"><label for="siteAddress">Site address</label><input id="siteAddress" name="siteAddress" type="text"></div>
+        <div class="field"><label for="contactName" class="required">Client contact on site</label><input id="contactName" name="contactName" type="text"></div>
+        <div class="field"><label for="contactRole">Their role</label><input id="contactRole" name="contactRole" type="text" placeholder="Site manager"></div>
+        <div class="field"><label for="permitNo">Permit to work no.</label><input id="permitNo" name="permitNo" type="text" placeholder="None issued"></div>
+        <div class="field"><label for="operatives">Operatives on site</label><input id="operatives" name="operatives" type="text" value="George"></div>
+        <div class="field"><label for="timeIn">Time signed in</label><input id="timeIn" name="timeIn" type="time"></div>
+        <div class="field"><label for="timeOut">Time signed out</label><input id="timeOut" name="timeOut" type="time"></div>
+        <div class="field"><label for="weather">Weather</label><input id="weather" name="weather" type="text" placeholder="Dry, light wind"></div>
+        <div class="field"><label for="tds">Water purity at start (ppm TDS)</label><input id="tds" name="tds" type="number" min="0" max="999" inputmode="numeric" placeholder="e.g. 3"></div>
+      </div>
+    </section>
+
+    <!-- 2. Scope -->
+    <section class="so-card">
+      <h2>2. Work carried out <small>Tick what was done</small></h2>
+      <div class="so-checks">
+        <label><input type="checkbox" name="chk" value="Site induction current for all operatives">Site induction current for all operatives</label>
+        <label><input type="checkbox" name="chk" value="RAMS briefed and signed by operatives before work started">RAMS briefed and signed before work started</label>
+        <label><input type="checkbox" name="chk" value="Permit to work issued, conditions followed and permit returned">Permit issued, followed and returned</label>
+        <label><input type="checkbox" name="chk" value="Site walk completed with client contact; vents, drains, lines and no-go areas identified">Site walk done with client contact</label>
+        <label><input type="checkbox" name="chk" value="Cordon and signage set out before poles raised">Cordon and signage set out</label>
+        <label><input type="checkbox" name="chk" value="Purified water only; no chemicals used">Purified water only, no chemicals</label>
+        <label><input type="checkbox" name="chk" value="Tank shells and cladding washed top-down with soft brush">Tank shells and cladding washed top-down</label>
+        <label><input type="checkbox" name="chk" value="Valves, vents, relief devices, gauges, labels and instruments not touched or sprayed">Valves, vents, gauges and labels not touched or sprayed</label>
+        <label><input type="checkbox" name="chk" value="Electrical panels, telemetry and cameras kept dry">Electrical panels, telemetry and cameras kept dry</label>
+        <label><input type="checkbox" name="chk" value="No work at height; all work from ground level">All work from ground level</label>
+        <label><input type="checkbox" name="chk" value="Standing water squeegeed from walkways; run-off kept to agreed drains">Walkways cleared of water; run-off to agreed drains</label>
+        <label><input type="checkbox" name="chk" value="Compound left as found, gates secured as instructed, all equipment removed">Compound left as found, equipment removed</label>
+        <label><input type="checkbox" name="chk" value="No incidents, near misses or damage to report">No incidents, near misses or damage</label>
+      </div>
+    </section>
+
+    <!-- 3. Tanks -->
+    <section class="so-card">
+      <h2>3. Tanks and areas cleaned <small>One row per tank or area</small></h2>
+      <div class="tank-rows" id="tank-rows"></div>
+      <div><button type="button" class="btn ghost sm" id="add-tank">+ Add a tank or area</button></div>
+    </section>
+
+    <!-- 4. Exceptions -->
+    <section class="so-card">
+      <h2>4. Anything not completed, and why</h2>
+      <div class="field"><label for="exceptions">Faces or items left, with the reason (overhead line, out of reach, client instruction, weather)</label><textarea id="exceptions" name="exceptions" rows="3" placeholder="None"></textarea></div>
+    </section>
+
+    <!-- 5. Observations -->
+    <section class="so-card">
+      <h2>5. Observations reported to the client</h2>
+      <div class="field"><label for="observations">Existing damage, corrosion, missing labels, leaks, blocked drains or anything else noticed and pointed out. Not fixed by us.</label><textarea id="observations" name="observations" rows="3" placeholder="None"></textarea></div>
+    </section>
+
+    <!-- 6. Photos -->
+    <section class="so-card">
+      <h2>6. Photos <small>Before, after and anything reported</small></h2>
+      <div class="photo-actions">
+        <label class="btn ghost sm" for="photo-camera">Take a photo<input id="photo-camera" type="file" accept="image/*" capture="environment" hidden></label>
+        <label class="btn ghost sm" for="photo-gallery">Add from gallery<input id="photo-gallery" type="file" accept="image/*" multiple hidden></label>
+      </div>
+      <p class="empty-note" id="photo-empty">No photos yet. Photos are shrunk to fit the PDF, so add as many as you need.</p>
+      <div class="photo-grid" id="photo-grid"></div>
+    </section>
+
+    <!-- 7. Acceptance -->
+    <section class="so-card">
+      <h2>7. Client acceptance</h2>
+      <p class="muted">The client contact has inspected the work with the operative. The agreed standard is: external surfaces of the listed tanks and areas free of algae, grime and loose dirt, with no water directed at vents, valves, instruments or electrical equipment.</p>
+      <div class="radio-row">
+        <label><input type="radio" name="acceptance" value="Accepted: work completed to the agreed standard">Accepted, completed to the agreed standard</label>
+        <label><input type="radio" name="acceptance" value="Accepted with snags listed below, to be completed on a return visit">Accepted with snags (listed below)</label>
+        <label><input type="radio" name="acceptance" value="Not accepted, see comments">Not accepted (see comments)</label>
+      </div>
+      <div class="field"><label for="snags">Snags or client comments</label><textarea id="snags" name="snags" rows="3" placeholder="None"></textarea></div>
+      <div class="field"><label for="returnVisit">Return visit agreed for</label><input id="returnVisit" name="returnVisit" type="text" placeholder="Not needed"></div>
+    </section>
+
+    <!-- 8. Signatures -->
+    <section class="so-card">
+      <h2>8. Signatures</h2>
+      <div class="sig-grid">
+        <div class="sig">
+          <div class="so-grid">
+            <div class="field"><label for="bocSigner" class="required">Client representative</label><input id="bocSigner" name="bocSigner" type="text" placeholder="Name"></div>
+            <div class="field"><label for="bocSignerRole">Position</label><input id="bocSignerRole" name="bocSignerRole" type="text"></div>
+          </div>
+          <canvas id="sig-boc" aria-label="Client signature area"></canvas>
+          <div class="sig-tools"><span>Sign above with a finger</span><button type="button" data-clear="sig-boc">Clear signature</button></div>
+        </div>
+        <div class="sig">
+          <div class="so-grid">
+            <div class="field"><label for="usSigner" class="required">For Northern External Cleaning Co</label><input id="usSigner" name="usSigner" type="text" value="George"></div>
+            <div class="field"><label for="usSignerRole">Position</label><input id="usSignerRole" name="usSignerRole" type="text" value="Owner"></div>
+          </div>
+          <canvas id="sig-us" aria-label="Contractor signature area"></canvas>
+          <div class="sig-tools"><span>Sign above with a finger</span><button type="button" data-clear="sig-us">Clear signature</button></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="so-actions">
+      <span class="status" id="status"></span>
+      <button type="button" class="btn" id="make-pdf">Create PDF</button>
+      <button type="button" class="btn ghost" id="share-pdf" hidden>Share PDF</button>
+      <button type="button" class="btn danger-ghost" id="clear-form">Start a new sheet</button>
+    </div>
+  </form>
+
+</main>
+
+<script src="js/vendor/jspdf.umd.min.js"></script>
+<script src="js/signoff.js?v=1"></script>
+</body>
+</html>

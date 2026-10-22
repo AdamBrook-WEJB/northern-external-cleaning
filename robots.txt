@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /signoff.html
+Sitemap: https://necleaningco.co.uk/sitemap.xml

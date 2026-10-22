@@ -1,0 +1,51 @@
+/* Job sign-off sheet — extra styles on top of styles.css */
+
+.so-wrap { max-width: 860px; margin: 0 auto; padding: 32px 24px 96px; display: flex; flex-direction: column; gap: 28px; }
+.so-card { background: var(--paper); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 18px; }
+.so-card h2 { font-size: 20px; font-weight: 700; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.so-card h2 small { font-size: 14px; font-weight: 500; color: var(--ink-2); }
+.so-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; }
+.so-grid .wide { grid-column: 1 / -1; }
+.field input[type="date"], .field input[type="time"], .field input[type="number"] { min-height: 48px; }
+
+/* Checklist */
+.so-checks { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 8px 20px; }
+.so-checks label { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; padding: 6px 0; cursor: pointer; font-size: 16px; }
+.so-checks input { width: 22px; height: 22px; flex: none; margin-top: 2px; accent-color: var(--ink); }
+
+/* Tank rows */
+.tank-rows { display: flex; flex-direction: column; gap: 12px; }
+.tank-row { display: grid; grid-template-columns: 1fr 1.2fr 1.2fr 1.4fr auto; gap: 10px; align-items: end; padding: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--cream); }
+.tank-row .field label { font-size: 13px; }
+.tank-row .notes { grid-column: 1 / -1; }
+.icon-btn { width: 44px; height: 44px; border: 1.5px solid var(--ink); background: transparent; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; color: var(--ink); font-size: 20px; line-height: 1; }
+@media (max-width: 640px) { .tank-row { grid-template-columns: 1fr 1fr; } .tank-row .remove { grid-column: 2; justify-self: end; } }
+
+/* Photos */
+.photo-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+.photo { display: flex; flex-direction: column; gap: 8px; border: 1px solid var(--line); border-radius: 10px; padding: 10px; background: var(--cream); }
+.photo img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 6px; }
+.photo select, .photo input { font: inherit; font-size: 14px; min-height: 40px; padding: 0 10px; border: 1.5px solid #B9B3A6; border-radius: 6px; background: var(--paper); width: 100%; color: var(--ink); }
+.photo .remove { align-self: flex-end; font-size: 13px; background: none; border: 0; color: var(--ink-2); cursor: pointer; text-decoration: underline; padding: 6px 0; min-height: 32px; }
+.empty-note { color: var(--ink-2); font-size: 15px; }
+
+/* Acceptance */
+.radio-row { display: flex; flex-direction: column; gap: 6px; }
+.radio-row label { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 16px; cursor: pointer; }
+.radio-row input { width: 22px; height: 22px; accent-color: var(--ink); }
+
+/* Signatures */
+.sig-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.sig { display: flex; flex-direction: column; gap: 10px; }
+.sig canvas { width: 100%; height: 160px; border: 1.5px dashed #B9B3A6; border-radius: 8px; background: #fff; touch-action: none; display: block; }
+.sig .sig-tools { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; color: var(--ink-2); }
+.sig .sig-tools button { background: none; border: 0; color: var(--ink); text-decoration: underline; cursor: pointer; font: inherit; font-size: 14px; min-height: 36px; }
+
+/* Output bar */
+.so-actions { position: sticky; bottom: 0; background: var(--paper); border-top: 1px solid var(--line); padding: 12px 0 16px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; z-index: 5; }
+.so-actions .status { flex: 1 1 100%; font-size: 14px; color: var(--ink-2); min-height: 18px; }
+.so-actions .btn { flex: 1 1 160px; }
+.btn.danger-ghost { background: transparent; color: var(--ink-2); border-color: var(--line); }
+.saved-pill { font-size: 13px; color: var(--ink-2); }
+.required::after { content: " *"; color: #B4530A; }

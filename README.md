@@ -12,8 +12,10 @@ A plain HTML/CSS site. No build step, no framework. Edit a file, push, and GitHu
 | `gallery.html` | Photo gallery with filter buttons |
 | `contact.html` | Quote form and contact details |
 | `privacy.html` | Short privacy notice (the quote form means you should have one) |
+| `signoff.html` | Internal job completion and sign-off sheet (not linked from the menu). Fill in on site, add photos, client signs on the phone, press Create PDF. Everything stays on the phone; the PDF is built there with `js/vendor/jspdf.umd.min.js` and shared from the phone's share sheet. Drafts autosave in the browser until "Start a new sheet". |
 | `css/styles.css` | All styling. Colours and fonts are set at the top in `:root`. |
 | `js/main.js` | Mobile menu, gallery filter, and the quote form |
+| `js/signoff.js`, `css/signoff.css` | The sign-off sheet's behaviour and styling. The checklist wording and the agreed-standard sentence live in `signoff.html`. |
 | `img/` | Photos (resized to 1600px for the web), logo, favicon, share image |
 
 The header, footer and mobile bar are repeated in every page, so a change to them (for example a new nav link) needs making in each HTML file. Search for the text and replace it in all files.
@@ -24,7 +26,7 @@ The header, footer and mobile bar are repeated in every page, so a change to the
 2. Upload everything in this folder to the root of the repository, keeping the `css`, `js` and `img` folders as they are. The `.nojekyll` file must go up too.
 3. In the repository go to **Settings → Pages**. Under **Build and deployment** choose **Deploy from a branch**, branch **main**, folder **/ (root)**. Save.
 4. After a minute the site is at `https://<your-username>.github.io/<repository-name>/`.
-5. For a proper domain later: buy one, add it under **Settings → Pages → Custom domain**, and point the domain's DNS at GitHub Pages as that screen describes. Tick **Enforce HTTPS** once it has verified.
+5. The domain is `necleaningco.co.uk` (bought at 123 Reg). The `CNAME` file in this folder tells GitHub Pages to serve the site at that domain, so keep it in the repository. DNS at 123 Reg: four A records on `@` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME record `www` → `adambrook-wejb.github.io`. In the repository, **Settings → Pages → Custom domain** = `necleaningco.co.uk`, then tick **Enforce HTTPS** once the DNS check passes.
 
 All links in the site are relative, so it works at a sub-path like `/northern-external-cleaning/` and at a custom domain without any changes.
 
