@@ -50,6 +50,24 @@ To have the form email George instead:
 - Prices: none shown. If George wants "from £" prices, add a line under each service's button on `services.html`.
 - Photos still needed: a UPVC fascia before/after and the van (window cleaning and jet washing are now covered). Drop them in `img/`, then add `<figure>` blocks in `gallery.html` with the right `data-cat` (windows, upvc, jet) so the filter buttons pick them up.
 
+## Getting found on Google
+
+What is already in the site: a title and description on every page, canonical URLs, `sitemap.xml`, `robots.txt`, LocalBusiness structured data on the home page (name, phone, Halifax, services), social share tags, and fast static pages over HTTPS. `signoff.html`, `privacy.html` and `404.html` are set to `noindex` and kept out of the sitemap on purpose.
+
+Nobody can guarantee a number one spot. For a local trade the realistic target is the top three "map pack" results and the first page for searches like "window cleaner Halifax", and most of that comes from the steps below rather than from the code.
+
+Do these in order:
+
+1. **Google Search Console.** Go to search.google.com/search-console, add a **Domain** property for `necleaningco.co.uk`, and verify it with the TXT record Google gives you (add it in 123 Reg under DNS, type TXT, name `@`). Then open **Sitemaps** and submit `sitemap.xml`. Use **URL inspection → Request indexing** on the home page. Check back weekly: it shows what people searched to reach the site, and any errors.
+2. **Google Business Profile.** This matters more than the website for local searches. Create it at business.google.com as a **service-area business** (hide the home address), main category "Window cleaning service", extra categories for gutter cleaning, pressure washing and UPVC cleaning (as offered), add every town George covers, phone, opening hours, the website address, and at least ten real job photos. Post a photo weekly.
+3. **Reviews.** Ask every happy customer for a Google review, with the link from the Business Profile dashboard, straight after the job. A steady trickle of real reviews with the service and town mentioned beats everything else. Never buy or invent reviews: Google removes them and can suspend the profile.
+4. **Same details everywhere.** Business name, phone number and area wording identical on the website, Business Profile, Facebook, Instagram bio, Yell, Bing Places, Apple Business Connect and any trade directory. Put `necleaningco.co.uk` in the Instagram bio link.
+5. **Bing Webmaster Tools.** Import the site from Search Console in one click. It also feeds Apple Maps, Siri and DuckDuckGo.
+6. **Content that matches searches.** Once George confirms the towns he covers, add one page per town or service (for example "Gutter cleaning in Brighouse") with real photos and a real job description from that area. Only write pages for places he genuinely works; thin copy-and-paste town pages tend to be ignored or penalised.
+7. **Links.** Ask local suppliers, the BOC contact, schools, estate agents and landlords he works for to link to the site, and list him in genuine local directories. A handful of relevant local links is enough.
+
+Analytics are deliberately not installed (the privacy page says so). Search Console is enough to start with. If you add Google Analytics later you will need a cookie banner and an update to `privacy.html`; Plausible or Cloudflare Web Analytics avoid cookies.
+
 ## Editing tips
 
 - Browsers cache `styles.css` and `main.js`. Every page links them as `css/styles.css?v=3` and `js/main.js?v=3`; when you change either file, change the number in all the HTML files (find and replace `?v=3` with `?v=4`) so visitors get the new version straight away.
